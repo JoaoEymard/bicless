@@ -1,0 +1,324 @@
+:root {
+    --primeira-cor: #ECEFF1;  /* cor clara */
+    --segunda-cor: #d7dde4;  /* cor neutra */
+    --terceira-cor: #313b44;  /* cor escura */
+    --quarta-cor: #2d363f;  /* cor mais escura */
+
+    --font-cor: #7e8e9f;
+    --font-cor-destak: #3a4651;
+    --font-inverse-cor: #BDBDBD;
+}
+
+html, body {
+    background-color: var(--primeira-cor) !important;
+}
+html, body, p, a, h1, h2, h3, h4, h5, h6, input {
+    font-family: 'Open Sans', sans-serif;
+}
+::-webkit-scrollbar {
+    width: 5px;
+}
+::-webkit-scrollbar-track {
+    background-color: var(--segunda-cor);
+}
+::-webkit-scrollbar-thumb {
+    background-color: var(--terceira-cor);
+}
+.sessaoGeral {
+    margin-left: 250px;
+}
+.sessaoGeral > div.row {
+    padding: 0 20px;
+}
+.title-page {
+    padding-bottom: 10px;
+    border-bottom: 1px solid var(--segunda-cor);
+    margin-bottom: 20px;
+}
+.title-page h3 { margin-bottom: 0; color: var(--font-cor-destak); }
+.title-page span { color: var(--font-inverse-cor); }
+
+.card {
+    background-color: #fff;
+    box-shadow: 2px 2px 5px rgba(126, 142, 159, 0.3);
+    margin-bottom: 20px;
+    padding: 10px 15px;
+    border-radius: 0;
+    border: none;
+}
+
+.card .title-block {
+    margin-left: -15px;
+    margin-right: -15px;
+    padding: 0 15px 10px;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #eceff1;
+}
+.card .title {
+    margin: 0;
+    font-size: 20px;
+    color: #4f5f6f;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.card .conteudo {
+    margin-bottom: 15px;
+}
+.campo-valor-os .input-group-addon {
+  background-color: transparent;
+  border-right: 0;
+  padding-right: 5px;
+}
+.campo-valor-os .preValor {
+  border-left: 0;
+  outline: none;
+  box-shadow: none;
+  border-color: #ccc !important;
+  padding-left: 5px;
+}
+
+/*  Estilo aside  */
+.sidebar {
+    position: fixed;
+    width: 250px;
+    height: 100%;
+    z-index: 100;
+    background-color: var(--terceira-cor);
+    color: var(--font-inverse-cor) !important;
+}
+.sidebar .brand .logo {
+    color: var(--font-inverse-cor);
+}
+.sidebar .brand .logo h3 { margin-bottom: 15px; }
+.sidebar a, .sidebar p, .sidebar .menu .dropdown-menu-aside a, .sidebar .btn {
+    color: var(--font-inverse-cor) !important;
+}
+.sidebar .menu li a {
+    font-size: 15px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    padding-left: 20px;
+    padding-right: 10px;
+}
+.sidebar .menu .pesquisaCliente {
+    padding: 5px;
+    padding-top: 7px;
+    background-color: var(--quarta-cor);
+}
+.sidebar .menu i {
+    width: 16px;
+    margin-right: 5px;
+    text-align: center
+}
+.sidebar .menu li a:hover, .sidebar .menu li a:visited,
+.sidebar .menu li a:focus, .sidebar .menu li a:active {
+    color: #ffffff;
+    background-color: var(--quarta-cor);
+}
+.sidebar .menu .dropdown-menu-aside {
+    position: relative;
+    width: 100%;
+    background-color: var(--quarta-cor);
+    border-radius: 0;
+    border: 0;
+    box-shadow: none;
+    margin: 0;
+    padding: 0;
+    float: none;
+}
+.sidebar .menu .dropdown > a span {
+    float: right;
+    margin-right: 15px;
+    margin-top: 3px;
+}
+@media (max-width: 767px) {
+    .sessaoGeral div.row {
+        padding: 0;
+    }
+    .sessaoGeral {
+        margin-left: 0;
+    }
+    .sidebar {
+        display: none;
+    }
+}
+/*  Fim do estilo do aside  */
+
+.list-cliente {
+    list-style: none;
+    border: none;
+    border-radius: 0;
+    padding: 15px;
+    background-color: #fff;
+    margin-bottom: 0;
+}
+.list-cliente > div:first-child {
+    font-size: 16px;
+    font-weight: 600;
+    border: none;
+    border-bottom: 1px solid #d7dde4;
+    margin-bottom: 5px
+}
+.list-cliente a {
+    border: none;
+    border-radius: none;
+}
+.list-cliente a:hover {background-color: #cfd8dc !important}
+.list-cliente a:nth-child(odd) {
+    color: #777;
+}
+.list-cliente a:nth-child(odd) {
+    background-color: var(--primeira-cor);
+}
+.list-cliente a div > span { margin-left: 2px; }
+.list-cliente span > span { margin-top: 2px; }
+
+.header-exibe-cliente {
+    display: flex;
+    align-items: center;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.list-exibe-cliente p {
+    margin: 0;
+    margin-left: 10px;
+    font-size: 12px;
+}
+.list-exibe-cliente p strong {
+    margin-left: -10px;
+    font-size: 14px;
+}
+.item-servico {
+    font-weight: normal;
+    padding: 3px 15px 5px;
+    padding-left: 5px;
+    width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+.item-servico input {
+    position: relative;
+    bottom: -2px;
+    height: 15px;
+    width: 15px;
+}
+.list_servicos {
+    display: block;
+    height: 250px;
+    overflow-y: scroll;
+    list-style: none;
+}
+.list_servicos .list-group-item {
+    border-radius: 0
+}
+.list_servicos .separador {
+    border-bottom: 1px #b1b1b1 dashed;
+    margin-bottom: 15px;
+}
+.list_servicos .list-group-item + .listaServicos .list-group-item {
+    border-bottom: 0;
+}
+@media (max-width: 768px){
+    .header-exibe-cliente {
+        display: block;
+    }
+}
+
+/*  Estilo da página de crud de serviços  */
+
+.form-add-servico {
+    margin-bottom: 20px;
+}
+.form-add-servico input {
+    border-radius: 0;
+    border-color: var(--terceira-cor) !important;
+}
+.form-add-servico button[type=submit]{
+    background-color: var(--terceira-cor);
+    color: #fff;
+    margin-left: -5px;
+    border-radius: 0;
+    border-color: var(--terceira-cor);
+}
+
+.lista_crud_servicos li {
+    display: inline-block;
+    margin: 3px 0px;
+}
+.lista_crud_servicos li a {
+    margin-left: 10px;
+    padding: 2px 8px;
+    margin-top: -2px;
+    color: #d43f3a;
+    background-color: #fae7e7;
+}
+
+@media (max-width: 768px){
+    .form-add-servico button[type=submit]{
+        margin-left: 0px;
+    }
+}
+
+/*  Fim do estilo da página de crud de serviços  */
+
+/*  Estilo para a pagina do recibo  */
+.box-recibo {
+    border: 1px solid #b1b1b1;
+    border-radius: 3px;
+    width: 95%;
+    display: block;
+    margin: 20px auto;
+    margin-top: 0;
+    padding: 20px;
+}
+.box-recibo .cabecalho {
+    opacity: 0.5;
+    padding: 0 15px;
+}
+
+.box-recibo .img-logo {
+    width: 130px;
+}
+.box-recibo .localizacao {
+    margin-top: -12px;
+}
+
+.box-recibo .box-recibo-valor > div {
+    font-size: 23px;
+    border: 1px solid #b1b1b1;
+    box-shadow: 2px 2px 4px;
+    margin-top: 15px;
+    padding: 5px;
+    display: inline-block;
+    width: 100%;
+    float: right;
+}
+
+.box-recibo .texto {
+    margin-top: 15px;
+    text-align: justify;
+}
+.box-recibo .texto .sublinado {
+    padding: 0 10px;
+    border-bottom: 1px solid #333;
+}
+
+/*  Fim do estilo para a pagina do recibo  */
+
+.btn-excluir {
+    color: #d43f3a;
+}
+.btn-editar {
+    color: #333;
+}
+.btn-controle-pagina > div {
+    margin-top: 25px;
+    background-color: #fff;
+    padding: 10px;
+}
+.btn-controle-pagina a, .btn-controle-pagina button, .btn-controle-pagina input {
+    margin: 0 5px;
+}

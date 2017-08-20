@@ -1,0 +1,1 @@
+<?phprequire_once "../modelo/mensagem.php";require_once "./conexao.php";require_once "../modelo/banco_servico.php";if (!isset($_SESSION["login_sistem"])) {    header("location: login.php");}$bd = conexao();if (adiciona_nome_servicos($bd, $_POST['nome'])){  msg("success", "Serviço cadastrado com sucesso");}header("location: ../crud_servicos.php");die();
